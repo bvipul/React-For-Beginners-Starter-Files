@@ -7,6 +7,8 @@ class Order extends React.Component {
         let fish = this.props.fishes[key];
         let count = this.props.order[key];
         let isAvailable = fish && fish.status === 'available';
+
+        if(! fish) return null;
             
         if(! isAvailable ) {
             return (
